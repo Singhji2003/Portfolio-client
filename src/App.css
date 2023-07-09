@@ -1,38 +1,651 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Fasthand&family=Inconsolata&family=Lora:ital@1&family=Oswald&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #081b29;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    font-family: 'Belanosima', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+    margin: 0rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a {
+    font-size: 1.3em;
+    color: white;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    color: #00abf0;
+}
+
+.changebg {
+    background-color: #112e42
+}
+
+
+/* Home Section Editor */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#home {
+    margin-top: 4rem;
+    min-height: 100vh;
+}
+
+.main-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 8rem;
+}
+
+.profession {
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.naming-heading {
+    margin-top: 2rem;
+    font-size: 1.8em;
+    line-height: 3.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profession-content {
+    font-size: 1.4em;
+    color: #00abf0;
+    overflow: hidden;
+    position: relative;
+}
+.profession-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    border-left: 2px solid #00abf0;
+    animation: textanimate steps(12) 3s infinite;
+}
+
+@keyframes textanimate {
+
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.image-heading svg {
+    margin-top: 5rem;
+    margin-right: -1rem;
+    height: 310px;
+    width: 500px;
+}
+
+.image-heading {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px #112e42;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-heading::before {
+    content: "";
+    /* border: 2px solid white; */
+    background-image: conic-gradient(#00abf0 20deg,
+            transparent 120deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: borderanimate 2s infinite;
+}
+
+@keyframes borderanimate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-heading::after {
+    content: "p";
+    width: 340px;
+    height: 340px;
+    background-color: #081b29;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    color: #081b29;
+}
+
+.image-heading img {
+    width: 300px;
+    animation: imagerotate 5s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes imagerotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(0deg);
+    }
+
+    70% {
+        transform: rotateY(0deg);
+    }
+
+    80% {
+        transform: rotateY(350deg);
+    }
+
+    90% {
+        transform: rotateY(355deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.resume-button button {
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    margin-top: 1.8rem;
+    margin-left: 1rem;
+    transition: 0.5s;
+    font-size: 0.6em;
+    cursor: pointer;
+    background-color: #00abf0;
+}
+
+.resume-button button:hover {
+    box-shadow: 0 0 1rem #00abf0;
+
+}
+
+/* Social Media icons */
+.social-media-icons {
+    display: flex;
+}
+
+.social-media-icons .icon {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border: 2px solid #00abf0;
+    width: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.6rem;
+    border-radius: 1.3rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.social-media-icons .icon i {
+    font-size: 0.8em;
+    color: #00abf0;
+}
+
+.social-media-icons .icon:hover {
+    background-color: #00abf0;
+    color: white;
+    box-shadow: 0 0 1rem #00abf0;
+}
+
+.social-media-icons .icon:hover i {
+    color: #081b29;
+}
+
+/* About section */
+#main {
+    margin-bottom: 4rem;
+}
+
+#about {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-width: 100%;
+    min-height: 100%;
+    transition: 1s;
+}
+
+.about-me {
+    transition: 1s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+
+}
+
+.about-heading {
+    font-size: 3em;
+}
+
+.about-content h3 {
+    font-size: 2em;
+}
+
+.about-content p {
+    width: 50vw;
+    font-size: 1.3em;
+    margin-top: 1rem;
+}
+
+.about-heading span {
+    color: #00abf0;
+}
+
+.profile-image {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-image img {
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid white;
+    position: relative;
+}
+
+.profile-image .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b29;
+    border-bottom: .2rem solid #081b29;
+    border-left: .2rem solid white;
+    border-right: .2rem solid white;
+    animation: circleanimate 2s infinite;
+    animation: circleanimate 8s linear infinite;
+}
+
+@keyframes circleanimate {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* skill component */
+#skill,
+#project,
+#contact {
+    min-width: 100%;
+    min-height: 100%;
+    margin-bottom: 5rem;
+}
+
+.skill-heading,
+.project-heading,
+.contact-heading {
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.skill-heading span,
+.project-heading span,
+.contact-heading span {
+    color: #00abf0;
+}
+
+.skill-container {
+    margin: 2rem 5rem;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    gap: 1rem;
+    flex-direction: column;
+
+}
+
+.skill-container-box {
+    border: 2px solid #00abf0;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1rem #00abf0;
+    gap: 2rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+
+.skill-content {
+    width: 20vw;
+}
+
+.skill-language {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-level {
+    border: 2px solid #00abf0;
+    height: 1rem;
+    position: relative;
+    margin-top: 0.7rem;
+}
+
+.skill-level span {
+    border: 2px solid #00abf0;
+    width: 90%;
+    box-shadow: 0 0 0.6rem #00abf0;
+    background-color: #00abf0;
+    height: 12px;
+    position: absolute;
+}
+
+.skill-row:nth-child(2) .skill-content:nth-child(1) .skill-level span {
+    width: 95%;
+}
+
+.skill-row:nth-child(2) .skill-content:nth-child(2) .skill-level span {
+    width: 90%;
+}
+
+.skill-row:nth-child(2) .skill-content:nth-child(3) .skill-level span {
+    width: 85%;
+}
+
+.skill-row:nth-child(3) .skill-content:nth-child(1) .skill-level span {
+    width: 80%;
+}
+
+.skill-row:nth-child(3) .skill-content:nth-child(2) .skill-level span {
+    width: 60%;
+}
+
+.skill-row:nth-child(3) .skill-content:nth-child(3) .skill-level span {
+    width: 70%;
+}
+
+.skill-row:nth-child(5) .skill-content:nth-child(1) .skill-level span {
+    width: 75%;
+}
+
+.skill-row:nth-child(5) .skill-content:nth-child(2) .skill-level span {
+    width: 80%;
+}
+
+.skill-row:nth-child(5) .skill-content:nth-child(3) .skill-level span {
+    width: 60%;
+}
+
+.skill-row:nth-child(7) .skill-content:nth-child(1) .skill-level span {
+    width: 80%;
+}
+
+.skill-row:nth-child(7) .skill-content:nth-child(2) .skill-level span {
+    width: 60%;
+}
+
+.skill-row:nth-child(7) .skill-content:nth-child(3) .skill-level span {
+    width: 65%;
+}
+
+.skill-container-box h1 {
+    text-align: center;
+}
+
+.coding-skills {
+    font-size: 1.5em;
+}
+
+/* Projects */
+#project {
+    margin-bottom: 6.4rem;
+}
+
+.projects {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.project-items {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.project-each-item img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.project-each-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 3rem #00abf0;
+    cursor: pointer;
+}
+
+.project-each-item:hover img {
+    opacity: 1;
+}
+
+.project-each-item:hover {
+    box-shadow: 0 0 3rem #00abf0;
+
+}
+
+.project-each-item h3 {
+    font-size: 1.5em;
+}
+
+.project-each-item p {
+    font-size: 1.2em;
+}
+
+.project-each-item {
+    width: 30%;
+    text-align: center;
+    border: 2px solid #00abf0;
+    padding: 1rem;
+    display: flex;
+    transition: 0.5s;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects-links {
+    display: flex;
+    margin-left: -3rem;
+    align-self: center;
+
+}
+
+.projects-links .icon {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border: 2px solid #00abf0;
+    width: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.6rem;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.projects-links .icon i {
+    font-size: 1.3em;
+    color: #00abf0;
+}
+
+.projects-links .icon:hover {
+    background-color: #00abf0;
+    color: white;
+    box-shadow: 0 0 1rem #00abf0;
+}
+
+.projects-links .icon:hover i {
+    color: #081b29;
+}
+
+.contactfrom {
+    border: 2px solid #00abf0;
+    width: 60vw;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+}
+
+.contactfrom input {
+    width: 45%;
+    padding: 1rem;
+    background: none;
+    border: 2px solid #00abf0;
+    transition: 0.5s;
+    outline: none;
+    color: white;
+    font-size: .5em;
+    height: 2.5rem;
+    margin: 1rem 1rem;
+}
+
+.contactfrom input::placeholder {
+    color: white;
+}
+
+.contactfrom textarea {
+    width: 96%;
+    background: none;
+    border: 2px solid #00abf0;
+    outline: none;
+    padding: 1rem;
+    height: 200px;
+    color: white;
+    font-size: 0.7em;
+}
+
+.contactfrom textarea::placeholder {
+    color: white;
+}
+.submit-form{
+    background: none;
+    border: 2px solid #00abf0;
+    padding: 0.7rem 2rem;
+    color: white;
+    font-size: 0.5em;
+    outline: none;
+    border-radius: 0.7rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contactfrom input:focus, .contactfrom textarea:focus{
+    background-color: #112e42;
+    box-shadow: 0 0 1rem #00abf0;
+}
+.submit-form:hover{
+    background-color: #00abf0;
+    box-shadow: 0 0 1rem #00abf0;
+}
+
+/* Alert Box */
+
+.alert{
+    position: absolute;
+    right: 1rem;
+    padding: 1rem;
+    margin-top: -4rem;
+    border-radius: 1rem;
+    display: flex;
+    background-color: #198754;
+    transition: 0.5s;
+}
+.alert i{
+    font-size: 0.6em;
+    margin-left: 1rem;
+    border: 2px solid white;
+    padding: 0.1rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+.alert i:hover{
+    background-color: white;
+    color: #198754;
+}
+.alert p{
+    font-size: 0.6em;
+}
+
+
+.navresponsive {
+    position: absolute;
+    right: 4rem;
+    top: 1.5rem;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+#show{
+    display: none;
+}
+#hide{
+    display: none;
 }

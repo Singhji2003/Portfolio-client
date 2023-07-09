@@ -1,0 +1,118 @@
+@media screen and (max-width:1140px) {
+    .main-heading {
+        padding: 5rem 3rem;
+    }
+}
+@media screen and (max-width:976px) {
+    .naming-heading {
+        margin-top: 2rem;
+        font-size: 1.5em;
+        line-height: 3.8rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+@media screen and (max-width:880px) {
+    .main-heading {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .naming-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:830px) {
+    .skill-row {
+        grid-template-columns: auto auto;
+        justify-items: center;
+    }
+    .skill-content {
+        width: 30vw;
+    }
+}
+@media screen and (max-width:720px) {
+    #show{
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        left: 45rem;
+        width: 100%;
+        position: absolute;
+        gap: 2rem;
+        align-items: center;
+        background-color: #00abf0;
+        padding: 6rem;
+        top: 0;
+        transition: 0.5s;
+        height: 100vh;
+    }
+    .contactfrom {
+        padding: 2rem 0rem;
+    }
+    .contactfrom input {
+        width: 67%;
+    }
+    .contactfrom textarea {
+        width: 70%;
+    }
+    .project-each-item {
+        width: 50vw;
+    }
+    .project-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .skill-row {
+        grid-template-columns: auto;
+    }
+    .skill-content {
+        width: 40vw;
+    }
+    .naming-heading {
+        margin-top: 2rem;
+        font-size: 1.2em;
+        line-height: 2.8rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .about-content p {
+        width: 70vw;
+    }
+}
+@media screen and (max-width:460px) {
+    .project-each-item {
+        width: 70vw;
+    }
+    .contactfrom {
+        width: 80vw;
+    }
+    .naming-heading {
+        text-align: center;
+    }
+}
+@media screen and (max-width:400px) {
+    .about-content p {
+        width: 86vw;
+    }
+.skill-container {
+    margin: 2rem 2rem;
+}
+.skill-content {
+    width: 67vw;
+}
+}
+@media screen and (max-width:320px) {
+    .about-content h3 {
+        font-size: 1.7em;
+    }
+    .about-content p {
+        font-size: 1em;
+    }
+}
