@@ -11,7 +11,7 @@ const Projects = () => {
             <div className="project-each-item">
                 <img src={require("./Image/singh tour.PNG")} alt=""/>
                 <h3>Singh Tour</h3>
-                <p>The vision of this site is to explore the new things with diffrent point of view. So Here you will find all the details of places and after the registrations you will get also best places details on email and can check on the site also. So feel free we will give the all updates in details. Thak you!!!!</p>
+                <p>The vision of this site is to explore the new things with diffrent point of view. So Here you will find all the details of places and after the registrations you will get also best places details on email and can check on the site also. So feel free we will give the all updates in details.</p>
                 <div className="projects-links">
                     <a className="icon" href="https://github.com/Singhji2003/singhTour-frontend" target="_singh"><i className="fa-brands fa-github-alt"></i></a>
                     <a className="icon" href="https://singhtour.netlify.app/" target="_singh"><i className="fa-solid fa-arrow-up-right-from-square"> </i></a>
@@ -20,7 +20,7 @@ const Projects = () => {
             <div className="project-each-item">
                 <img src={require("./Image/linkedin.PNG")} alt=""/>
                 <h3>Linkedin Clone </h3>
-                <p>This is simple clone of Linkedin. It is just the front page with responsive to practice the Tailwind css.</p>
+                <p>This is simple clone of Linkedin. It is just the front page with responsive to practice the Tailwind css. It was just for the practice of TailWinds Css for design so I made it fully responsive using Tailwind itself.</p>
                 <div className="projects-links">
                     <a className="icon" href="https://github.com/Singhji2003/Linkedin-clone" target="_singh"><i className="fa-brands fa-github-alt"></i></a>
                     <a className="icon" href="https://singhlinkedin.netlify.app/" target="_singh"><i className="fa-solid fa-arrow-up-right-from-square"> </i></a>

@@ -13,6 +13,12 @@ document.addEventListener('scroll', ()=>{
     }
 },[])
     })
+    const showNav = ()=>{
+        document.querySelector('ul').style.left = '0';
+    }
+    const hideNav  =()=>{
+        document.querySelector('ul').style.left = '45rem';
+    }
     return(
          <header className="header" id="navbar">
         <div className="logo">
@@ -20,11 +26,11 @@ document.addEventListener('scroll', ()=>{
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#main">About</a></li>
-                <li><a href="#skill">Skills</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onClick={hideNav} >Home</a></li>
+                <li><a href="#main" onClick={hideNav}>About</a></li>
+                <li><a href="#skill"onClick={hideNav} >Skills</a></li>
+                <li><a href="#project"onClick={hideNav} >Projects</a></li>
+                <li><a href="#contact" onClick={hideNav}>Contact</a></li>
             </ul>
             <div class="navresponsive">
                 <i id="show" className="fa-solid fa-bars" onClick={()=>{
@@ -33,9 +39,9 @@ document.addEventListener('scroll', ()=>{
                      document.getElementById('hide').style.display = 'block'
                 }}></i>
                 <i id="hide" className="fa-solid fa-xmark" onClick={()=>{
-                    document.querySelector('ul').style.left = '45rem';
-                    document.getElementById('show').style.display = 'block'
-                    document.getElementById('hide').style.display = 'none'
+                      document.querySelector('ul').style.left = '45rem';
+                      document.getElementById('show').style.display = 'block'
+                      document.getElementById('hide').style.display = 'none'
                 }}></i>
             </div>
         </nav>

@@ -2,6 +2,7 @@ import './App.css'
 import './Responsive.css'
 import AboutUs from './component/AboutUs';
 import Contact from './component/Contact';
+import Footer from './component/Footer';
 import Header from './component/Header';
 import HomePage from './component/HomePage';
 import Projects from './component/Projects';
@@ -15,6 +16,7 @@ const App = ()=>{
     <Skills/>
     <Projects/>
     <Contact/>
+    <Footer/>
     </>
   )
 }

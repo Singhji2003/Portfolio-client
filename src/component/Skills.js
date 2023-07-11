@@ -49,7 +49,7 @@ const Skills = () => {
                 <div className="skill-content">
                     <div className="skill-language">
                         <h3>React Native</h3>
-                        <p>70   %</p>
+                        <p>70%</p>
                     </div>
                     <div className="skill-level"><span></span></div>
                 </div>
