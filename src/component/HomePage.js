@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react'
 const HomePage = ()=>{
     useEffect(()=>{
+        document.addEventListener('scroll', ()=>{
+            if(window.scrollY>200){
+                document.getElementById('gotoup').style.display = 'block';
+            }
+            else{
+                document.getElementById('gotoup').style.display = 'none';
+        
+      }  })
         const animateText = document.querySelector('.profession-content')
 
 const textChange = ()=>{
@@ -19,7 +27,8 @@ const textChange = ()=>{
 }
 textChange();
 setInterval(textChange, 12000)
-    },[])
+}
+    ,[])
 
     return(
         <section id="home">
@@ -34,10 +43,10 @@ setInterval(textChange, 12000)
                     </i>
                 </div>
                 <div className="social-media-icons">
-                    <a className="icon"><i className="fa-brands fa-facebook-f"></i></a>
+                    <a className="icon" href="https://www.facebook.com/profile.php?id=100070711231550" target="_singh"><i className="fa-brands fa-facebook-f"></i></a>
                     <a className="icon" href="https://www.linkedin.com/in/arpan-singh-51914a243" target="_singh"><i className="fa-brands fa-linkedin-in"></i></a>
                     <a className="icon" href="https://github.com/Singhji2003" target="_singh"><i className="fa-brands fa-github-alt"></i></a>
-                    <a className="icon" href="https://www.instagram.com/arpan_singh_rajput__/?igshid=YmMyMTA2M2Y=" target="_singh"><i className="fa-brands fa-instagram"></i></a>
+                    <a className="icon" href="https://www.instagram.com/arpan_singhji/" target="_singh"><i className="fa-brands fa-instagram"></i></a>
                 </div>
                 <div className="resume-button">
                     <a href={require("./Resume.pdf")} download="Resume-Arpan"><button>Downlaod Resume</button></a>
@@ -46,6 +55,9 @@ setInterval(textChange, 12000)
             <div className="image-heading">
                 <img src={require("./Image/arpanimg.jpeg")} alt="" data-aos="flip-right"/>
             </div>
+        </div>
+        <div className='go-to-up' id='gotoup'>
+        <a href='#home'><i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </section>
     )

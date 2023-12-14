@@ -625,7 +625,7 @@ nav ul li a:hover {
     position: absolute;
     right: 1rem;
     padding: 1rem;
-    margin-top: -4rem;
+    margin-top: 0rem;
     border-radius: 1rem;
     display: flex;
     background-color: #198754;
@@ -669,4 +669,25 @@ nav ul li a:hover {
     margin-top: 2rem;
     background-color: #112e42;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.go-to-up i{
+    position: fixed;
+    left: 92vw;
+    background-color: #00abf0;
+    cursor: pointer;
+    border: 2px solid #00abf0;
+    padding: 1rem;
+}
+.go-to-up i:hover{
+    background-color: #112e42;
+    color: white;
+}
+#gotoup{
+    display: none;
+}
+.spinner img{
+    width: 13rem;
+    position: absolute;
+    margin-top: -6rem;
+    margin-left: -6rem;
 }

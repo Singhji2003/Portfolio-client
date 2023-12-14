@@ -54,7 +54,7 @@
         padding: 2rem 0rem;
     }
     .contactfrom input {
-        width: 67%;
+        width: 80%;
     }
     .contactfrom textarea {
         width: 70%;
@@ -76,22 +76,34 @@
     .skill-content {
         width: 40vw;
     }
+    .project-each-item {
+        width: 85vw;
+    }
+    .submit-form {
+        padding: 0.2rem 2rem;
+    }
     .naming-heading {
         margin-top: 2rem;
         font-size: 1.2em;
         line-height: 2.8rem;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+    .skill-container {
+        margin: 2rem 1rem;
+    }
     .about-content p {
         width: 70vw;
+    }
+    .skill-content {
+        width: 67vw;
+    }
+    .contactfrom {
+        width: 85vw;
     }
 }
 @media screen and (max-width:460px) {
     .project-each-item {
-        width: 70vw;
-    }
-    .contactfrom {
-        width: 80vw;
+        width: 85vw;
     }
     .naming-heading {
         text-align: center;
@@ -102,7 +114,7 @@
         width: 86vw;
     }
 .skill-container {
-    margin: 2rem 2rem;
+    margin: 2rem 1rem;
 }
 .skill-content {
     width: 67vw;
