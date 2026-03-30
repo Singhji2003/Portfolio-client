@@ -41,8 +41,8 @@ const Skills = () => {
                 </div>
                 <div className="skill-content">
                     <div className="skill-language">
-                        <h3>C programming</h3>
-                        <p>60%</p>
+                        <h3>Angular</h3>
+                        <p>40%</p>
                     </div>
                     <div className="skill-level"><span></span></div>
                 </div>
